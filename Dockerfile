@@ -10,10 +10,9 @@ RUN apk add --update git
 #    npm run build && \
 #    ls -al dist/
 
-RUN cd /tmp && \
-    git clone https://github.com/monya-wallet/cordova-plugin-qrscanner.git && \
-    cd cordova-plugin-qrscanner && \
-    git checkout safari-fix && \
-    npm install && \
+ADD . /tmp/cordova-plugin-qrscanner
+WORKDIR /tmp/cordova-plugin-qrscanner
+
+RUN npm install && \
     npm run prep-release && \
     ls -al dist/
