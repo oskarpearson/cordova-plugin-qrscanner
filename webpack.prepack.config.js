@@ -7,11 +7,11 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './src/browser'),
-    filename: 'worker.min.js'
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false
-    })
-  ]
+    filename: 'worker.js'
+  } //,
+  // plugins: [
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     comments: false
+  //   })
+  // ]
 }

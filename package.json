@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "gulp && npm run clean-build",
-    "clean-build": "trash dist/plugin.min.js && trash dist/www.min.js && trash src/browser/worker.min.js",
+    "clean-build": "trash dist/plugin.js && trash dist/www.js",
     "test": "npm run jshint",
     "jshint": "jshint src/browser/src && jshint src/common/src && jshint tests",
     "gen-tests": "npm run build && npm run clean-platform-tests && npm run mkdirp-platform-tests && npm run copy-platform-tests && npm run install-platform-tests",
@@ -52,7 +52,7 @@
     "url": "https://github.com/bitpay/cordova-plugin-qrscanner/issues"
   },
   "homepage": "https://github.com/bitpay/cordova-plugin-qrscanner",
-  "main": "dist/cordova-plugin-qrscanner-lib.min.js",
+  "main": "dist/cordova-plugin-qrscanner-lib.js",
   "dependencies": {
     "qrcode-reader": "^1.0.4",
     "webrtc-adapter": "^3.1.4"

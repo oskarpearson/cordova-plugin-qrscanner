@@ -10,9 +10,15 @@ RUN apk add --update git
 #    npm run build && \
 #    ls -al dist/
 
-ADD . /tmp/cordova-plugin-qrscanner
-WORKDIR /tmp/cordova-plugin-qrscanner
+ADD package.json /tmp/cordova-plugin-qrscanner/
 
-RUN npm install && \
-    npm run prep-release && \
+RUN ls -laR /tmp && \
+    cd /tmp/cordova-plugin-qrscanner && \
+    npm install --global
+    
+ADD . /tmp/cordova-plugin-qrscanner/
+
+RUN cd /tmp/cordova-plugin-qrscanner/ && \
+    npm install && \
+    npm run build && \
     ls -al dist/

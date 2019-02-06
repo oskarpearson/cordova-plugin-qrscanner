@@ -8,15 +8,15 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'cordova-plugin-qrscanner-lib.min.js',
+    filename: 'cordova-plugin-qrscanner-lib.js',
     library: 'QRScanner',
     libraryTarget: 'umd',
     umdNamedDefine: true
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      comments: false,
-      sourceMap: true
-    })
-  ]
+  } //,
+  // plugins: [
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     comments: false,
+  //     sourceMap: true
+  //   })
+  // ]
 };
